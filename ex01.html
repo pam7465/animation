@@ -4,8 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex01</title>
+    <style>
+        .translate-box{
+            width:100px;
+            height:100px;
+            background-color:red;
+            transition-duration:1s;
+        }
+        h1:hover + .translate-box{
+            transform:translate(500px,500px);
+        }
+        .box{
+            height:500px;
+            background:lightblue;
+            display:flex;
+            flex-flow:row;
+            justify-content:center;
+            align-items:center;
+        }
+        .l-box{
+            width:400px;
+            height:300px;
+            background-color:aqua;
+            transform:translate(-1000px,0);
+            opacity:0;
+            transition-duration:0.5s;
+        }
+        .r-box{
+            width:400px;
+            height:300px;
+            background-color:blueviolet;
+            transform:translate(300px,0);
+            opacity:0;
+            transition-duration:0.6s;
+        }
+
+        /* 완료상태 */
+        .box:hover>.l-box{
+            transform:translate(0,0); 
+            opacity:1;
+        }
+        .box:hover>.r-box{
+            transform:translate(0,0);
+            opacity:1;
+        }
+    </style>
 </head>
 <body>
+    <h1>위치 이동(translate...)</h1>
+    <div class="translate-box"></div>
+
+    <div class="box">
+        <div class="l-box"></div>
+        <div class="r-box"></div>
+    </div>
     
 </body>
 </html>
