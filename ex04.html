@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex04</title>
+    <style>
+        .skew-box{
+            width:200px;
+            height:200px;
+            margin:100px auto;
+            background-color:red;
+            transition-duration:1s;
+        }
+        h1:hover + .skew-box{
+            transform:skew(20deg,10deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>skew...(기울이기)</h1>
+    <div class="skew-box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nihil tenetur magni, totam numquam laboriosam reiciendis ipsum asperiores nesciunt vero cupiditate minus vitae nobis, praesentium delectus.</div>
+</body>
+</html>
